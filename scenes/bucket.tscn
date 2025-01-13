@@ -1,0 +1,89 @@
+[gd_scene load_steps=2 format=3 uid="uid://bakc3mtw74eg3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8nhad"]
+distance = -1.0
+
+[node name="Bucket" type="Node2D"]
+
+[node name="BucketBackground" type="ColorRect" parent="."]
+offset_top = 438.0
+offset_right = 1170.0
+offset_bottom = 2324.0
+size_flags_horizontal = 4
+color = Color(0.95611, 0.920871, 0.917745, 1)
+
+[node name="BucketFillLine" type="ColorRect" parent="."]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -10.0
+offset_top = 411.0
+offset_right = 1170.0
+offset_bottom = 461.0
+grow_vertical = 2
+pivot_offset = Vector2(208, -0.00390625)
+size_flags_horizontal = 4
+color = Color(0.27451, 0.745098, 0.827451, 0.568627)
+
+[node name="BucketRight" type="StaticBody2D" parent="."]
+position = Vector2(579, 1086)
+
+[node name="worldBoundary" type="CollisionShape2D" parent="BucketRight"]
+position = Vector2(541, 0)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_8nhad")
+
+[node name="ColorRect" type="ColorRect" parent="BucketRight/worldBoundary"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -1266.0
+offset_right = 734.0
+offset_bottom = 50.0
+grow_vertical = 2
+pivot_offset = Vector2(208, -0.00390625)
+size_flags_horizontal = 4
+color = Color(0.713527, 0.698812, 0, 1)
+
+[node name="BucketLeft" type="StaticBody2D" parent="."]
+position = Vector2(579, 1086)
+rotation = -3.14159
+
+[node name="worldBoundary" type="CollisionShape2D" parent="BucketLeft"]
+position = Vector2(541, 0)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_8nhad")
+
+[node name="ColorRect" type="ColorRect" parent="BucketLeft/worldBoundary"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -736.998
+offset_top = -11.9968
+offset_right = 1263.0
+offset_bottom = 38.0032
+grow_vertical = 2
+pivot_offset = Vector2(1293.79, 25)
+size_flags_horizontal = 4
+color = Color(0.713726, 0.698039, 0, 1)
+
+[node name="BucketBottom" type="StaticBody2D" parent="."]
+position = Vector2(579, 1086)
+rotation = 1.57081
+
+[node name="worldBoundary" type="CollisionShape2D" parent="BucketBottom"]
+position = Vector2(1218, -0.00451139)
+rotation = -1.5708
+shape = SubResource("WorldBoundaryShape2D_8nhad")
+
+[node name="ColorRect" type="ColorRect" parent="BucketBottom/worldBoundary"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = -585.0
+offset_right = 585.0
+offset_bottom = 50.0
+grow_vertical = 2
+pivot_offset = Vector2(208, -0.00390625)
+size_flags_horizontal = 4
+color = Color(0.713527, 0.698812, 0, 1)

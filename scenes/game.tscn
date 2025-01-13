@@ -1,0 +1,53 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0bnra6rghb0d"]
+
+[ext_resource type="PackedScene" uid="uid://bakc3mtw74eg3" path="res://scenes/bucket.tscn" id="1_qwvw1"]
+[ext_resource type="Script" path="res://scripts/fruit_spawner.gd" id="2_ghc8k"]
+[ext_resource type="PackedScene" uid="uid://cg3ijvge0sxek" path="res://scenes/strawberry.tscn" id="3_x08qy"]
+
+[node name="Game" type="Area2D"]
+
+[node name="WorldBackground" type="ColorRect" parent="."]
+offset_right = 1170.0
+offset_bottom = 2532.0
+size_flags_horizontal = 4
+color = Color(0.810157, 0.961383, 1, 1)
+
+[node name="Bucket" parent="." instance=ExtResource("1_qwvw1")]
+position = Vector2(2, 0)
+
+[node name="FruitSpawner" type="Node2D" parent="."]
+position = Vector2(0, 305)
+script = ExtResource("2_ghc8k")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(585, 1268)
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 65.0
+offset_top = 45.0
+offset_right = 211.0
+offset_bottom = 115.0
+color = Color(0.277528, 0.277528, 0.277528, 1)
+
+[node name="GameMode" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 4.0
+offset_right = 131.0
+offset_bottom = 30.0
+theme_override_font_sizes/font_size = 18
+text = "Game Mode"
+horizontal_alignment = 1
+
+[node name="Score" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 23.0
+offset_right = 131.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 31
+text = "Score"
+horizontal_alignment = 1
+
+[node name="strawberry" parent="." instance=ExtResource("3_x08qy")]
+position = Vector2(692, 1705)

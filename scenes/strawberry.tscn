@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cg3ijvge0sxek"]
+
+[ext_resource type="Script" path="res://scripts/fruit.gd" id="1_jgvnx"]
+[ext_resource type="Texture2D" uid="uid://boake5sglrfs" path="res://images/strawberry.png" id="2_t4hmk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_48xyr"]
+radius = 235.206
+
+[node name="fruit" type="RigidBody2D"]
+disable_mode = 1
+contact_monitor = true
+max_contacts_reported = 6
+script = ExtResource("1_jgvnx")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.138672, 0.138672)
+texture = ExtResource("2_t4hmk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 3)
+scale = Vector2(0.174315, 0.172363)
+shape = SubResource("CircleShape2D_48xyr")
