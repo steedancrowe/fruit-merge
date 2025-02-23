@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://8rmr2y75v87b" path="res://images/melon.png" id="2_gsf72"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_48xyr"]
-radius = 711.356
+radius = 918.043
 
 [node name="fruit" type="RigidBody2D"]
 disable_mode = 1
@@ -13,7 +13,7 @@ max_contacts_reported = 6
 script = ExtResource("1_7f0p5")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.291016, 0.291016)
+scale = Vector2(0.380859, 0.380859)
 texture = ExtResource("2_gsf72")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
